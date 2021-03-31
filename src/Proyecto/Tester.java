@@ -10,9 +10,9 @@ public class Tester {
         
         SistemadecambiodeMoneda cambio= new SistemadecambiodeMoneda();
         
-        cambio.iniciarprograma();
-        
-        
+        //cambio.iniciarprograma();
+        SistemadeCambioMoneda2 sistem=new SistemadeCambioMoneda2();
+        sistem.iniciarprograma();
     }
     
 }

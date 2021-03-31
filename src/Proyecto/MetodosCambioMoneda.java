@@ -1,7 +1,7 @@
 package Proyecto;
 
 import java.util.Scanner;
-
+import java.util.Date;
 /**
  * Primer problemaproyecto
  *
@@ -19,12 +19,13 @@ public class MetodosCambioMoneda {
      * colones
      */
     public void DolarAColon() {
+        Date fecha =new Date();
         Scanner sca = new Scanner(System.in);
         System.out.println("Cual es el monto a convertir a colones: ");
         this.monto = sca.nextDouble();//el usuario asigna el monto desde un scanner
         double resultado = this.monto * this.cambioacolon;//esta formula retorna el monto total convertido a colones
         System.out.println("El monto en colones es de: ₡" + resultado);//imprime el monto total en colones
-
+        System.out.println("Actualizado con el cambio de moneda del dia: "+fecha);
     }
 
     /**
@@ -33,11 +34,12 @@ public class MetodosCambioMoneda {
      */
     public void EuroAColon() {
         Scanner sca = new Scanner(System.in);
+        Date fecha=new Date();
         System.out.println("Cual es el monto a convertir a colones: ");
         this.monto = sca.nextDouble();//el usuario asigna el monto desde un scanner
         double resultado = (this.monto * this.euroAdolares) * this.cambioacolon;// esta formula calcula el monto total convertido de euros a colones
         System.out.println("El monto en colones es de: ₡" + resultado);//imprime al usuario el monto total a colones
-
+        System.out.println("Actualizado con el cambio de moneda del dia: "+fecha);
     }
 
     /**
@@ -46,11 +48,12 @@ public class MetodosCambioMoneda {
      */
     public void ColonADolar() {
         Scanner sca = new Scanner(System.in);
+        Date fecha=new Date();
         System.out.println("Cual es el monto a convertir a Dolares: ");
         this.monto = sca.nextDouble();
         double resultado = this.monto / this.cambioacolon;//se utiliza division para saber cual es el monto total en dolares
         System.out.println("El monto en dólares es de: $" + resultado);
-
+        System.out.println("Actualizado con el cambio de moneda del dia: "+fecha);
     }
 
     /**
@@ -58,10 +61,12 @@ public class MetodosCambioMoneda {
      */
     public void ColonAEuros() {
         Scanner sca = new Scanner(System.in);
+        Date fecha=new Date();
         System.out.println("Cual es el monto a convertir a Euros: ");
         this.monto = sca.nextDouble();
         double resultado = (this.monto / this.cambioacolon) / this.euroAdolares;//se utilizan dos divisiones para calcular el valor en euros
         System.out.println("El monto en Euros es de: €" + resultado);
+        System.out.println("Actualizado con el cambio de moneda del dia: "+fecha);
 
     }
 
@@ -70,10 +75,12 @@ public class MetodosCambioMoneda {
      */
     public void DolaresAEuros() {
         Scanner sca = new Scanner(System.in);
+        Date fecha=new Date();
         System.out.println("Cual es el monto a convertir a Euros: ");
         this.monto = sca.nextDouble();
         double resultado = this.monto / this.euroAdolares;//se utiliza la division para retornar el valor total de dolares a Euros
         System.out.println("El monto en Euros es de: €" + resultado);
+        System.out.println("Actualizado con el cambio de moneda del dia: "+fecha);
     }
 
     /**
@@ -81,11 +88,12 @@ public class MetodosCambioMoneda {
      */
     public void EurosADolares() {
         Scanner sca = new Scanner(System.in);
+        Date fecha=new Date();
         System.out.println("Cual es el monto a convertir a dolares: ");
         this.monto = sca.nextDouble();
         double resultado = this.monto * this.euroAdolares;//se utiliza la multiplicacion para retornar el valor total de Euros a dolares
         System.out.println("El monto en Dolares es de: $" + resultado);
-
+        System.out.println("Actualizado con el cambio de moneda del dia: "+fecha);
     }
 
 }
