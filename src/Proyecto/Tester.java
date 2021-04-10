@@ -13,7 +13,7 @@ public class Tester {
         //cambio.iniciarprograma();
         
         //Prueba problema 2
-        SistemadeCambioMoneda2 sistem=new SistemadeCambioMoneda2();
+        /*SistemadeCambioMoneda2 sistem=new SistemadeCambioMoneda2();
        // sistem.iniciarprograma();
        
        //prueba problema 4
@@ -21,6 +21,7 @@ public class Tester {
        Sistemadebusquedabinaria sistembusque=new Sistemadebusquedabinaria();
        
        sistembusque.iniciar();
+    */
     }
     
 }
