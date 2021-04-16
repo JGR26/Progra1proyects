@@ -10,6 +10,9 @@ public class SistemadecambiodeMoneda {
 
     public byte monedaorigen;
 
+    /**
+     *Metodo para iniciar el programa
+     */
     public void iniciarprograma() {
 
         MetodosCambioMoneda monedasalida = new MetodosCambioMoneda();

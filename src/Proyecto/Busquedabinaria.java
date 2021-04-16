@@ -6,21 +6,21 @@ import java.util.Scanner;
 /**
  * Problema de busqueda binaria #4
  *
- * @author jgr
+ * @author JGR
  */
 public class Busquedabinaria {
 
     private int[] listanum = {200, 1, 8, 4, 45};//esta propiedad no es necesaria que sea publica ya que usa valores predeterminados que no es necesario cambiar
     public int numSolicitado;//Esta propiedad la define el usuario
-
+    
     /**
      * Este metodo sirve para que el usuario busque un numero dentro de una
      * lista de numeros predeterminada
      */
     public void busquedabinaria() {
         Scanner sca = new Scanner(System.in);
-        Arrays.sort(listanum);// esto es solo para practicar otras formas de arreglo aunq no era necesario queria practicarlo jajaja
-        System.out.println("Digite un numero para verificar si esta en el arreglo");
+       // Arrays.sort(listanum);// esto es solo para practicar otras formas de arreglo aunq no era necesario queria practicarlo jajaja
+        System.out.println("Digite un numero para verificar si esta en el arreglo:");
         this.numSolicitado = sca.nextInt();// se le pide un numero al usuario para buscarlo en  el sistema
 
         if (Arrays.binarySearch(this.listanum, this.numSolicitado) > 0) //en el if se encuentra el Arrays.binarySearch el cual hace la busqueda del numero en el sistema
