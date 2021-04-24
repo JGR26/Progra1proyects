@@ -13,8 +13,23 @@ public class Pedido {
     private String customerId;
     private String status;
     private String shippingId;
+
+    public Pedido(int orderId, String dateCreated, String dateShipped, String customerName, String customerId, String status, String shippingId) {
+        this.orderId = orderId;
+        this.dateCreated = dateCreated;
+        this.dateShipped = dateShipped;
+        this.customerName = customerName;
+        this.customerId = customerId;
+        this.status = status;
+        this.shippingId = shippingId;
+    }
     
     
+    
+    public void placeOrder(){
+        
+        
+    }
 
     public int getOrderId() {
         return orderId;
