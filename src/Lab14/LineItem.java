@@ -10,11 +10,12 @@ public class LineItem {
     private Integer quantity;
     private float price;
     private Product product;
-
+    
     public LineItem(Integer quantity, float price, Product product) {
         this.quantity = quantity;
         this.price = price;
         this.product = product;
+       
     }
     
     

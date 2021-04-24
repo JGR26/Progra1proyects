@@ -11,10 +11,14 @@ public class CarritoDecompras {
     
     private Date created;
     private LineItem[] line;
-    
+    private int contadorLinea;
     public CarritoDecompras(){
         created=new Date();
         line=new LineItem[100];
+    }
+    public void agregarLinea(LineItem linea){
+        line[contadorLinea]=linea;
+        contadorLinea++;
     }
     
     public Date getCreated() {

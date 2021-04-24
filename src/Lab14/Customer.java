@@ -15,7 +15,11 @@ public class Customer extends User{
     private String creditCardInfo;
     private String shippingInfo;
     private String accountBalance;
-
+    private Pedido[] pedidos;
+    private CarritoDecompras carrito;
+    private int contadorPedido=0;
+    
+    
     public Customer(String customerName, String address, String email, String creditCardInfo, String shippingInfo, String accountBalance) {
         this.customerName = customerName;
         this.address = address;
@@ -23,6 +27,9 @@ public class Customer extends User{
         this.creditCardInfo = creditCardInfo;
         this.shippingInfo = shippingInfo;
         this.accountBalance = accountBalance;
+        contadorPedido=0;
+        pedidos=new Pedido[100];
+        carrito=new CarritoDecompras();
     }
     
     
@@ -38,6 +45,11 @@ public class Customer extends User{
     
     public void updateProfile(){
         
+    }
+     public void agregarPedido(Pedido p){
+         this.pedidos[contadorPedido]=p;
+         
+        contadorPedido++;
     }
 
     public String getCustomerName() {
@@ -119,6 +131,12 @@ public class Customer extends User{
     public void setRegisterDate(Date registerDate) {
         this.registerDate = registerDate;
     }
+
+    public CarritoDecompras getCarrito() {
+        return carrito;
+    }
+
+   
     
     
 }
