@@ -27,6 +27,17 @@ public class ControladorSistemaNotas {
                 case 3:
                     vista.ImprimirNotas();
                     break;
+                
+                case 4:
+                    vista.ImprimirOrdenNotas();
+                    break;
+                case 5:
+                   // vista.ImprimirNotaAlta();
+                    break;
+                case 7:
+                    vista.ImprimirPromedio();
+                    break;
+                
             }
         }
     }
