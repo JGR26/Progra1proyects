@@ -32,7 +32,7 @@ public class VistaSistemaNotas {
         modelo = new ModeloSistemaNotas(cantidadEst);
     }
 
-    public void ImprimirNotas() {
+    public void generarReporteTodosAlumnos() {
         JTextArea textArea = new JTextArea();
 
         for (int i = 0; i < modelo.getIndice(); i++) {
@@ -47,7 +47,7 @@ public class VistaSistemaNotas {
 
     }
 
-    public void ImprimirOrdenNotas() {
+    public void generarReporteTodosExamenesOrdenados() {
 
         JTextArea textArea = new JTextArea();
         modelo.bubbleSortCalifi();
@@ -69,21 +69,39 @@ public class VistaSistemaNotas {
 
     }
 
-    /* public void ImprimirNotaAlta() {
+    public void ImprimirNotaBaja() {
         JTextArea textArea = new JTextArea();
+        modelo.bubbleSortCalifi();
+        int n=0;
+        for (int i = 0;i <0 ; i--) {
+           n= modelo.calificaciones.length-1;
+        }
         
-            textArea.append("El Alumno con mejor promedio es: " + modelo.getNombreAlumno()
-                    + "\nEl promedio del examen es:" + modelo.notaMaxima());
-        
+        textArea.append("El alumno con nota mas baja es: " + modelo.getNombreAlumno(n)
+                + "\nEl promedio del examen es:" + modelo.notaMinima());
+
         JOptionPane.showMessageDialog(null, textArea);
     }
-     */
+    
+    public void imprimirNotaMasAlta(){
+       JTextArea textArea = new JTextArea(); 
+    textArea.append("El alumno con nota mas Alta es: " + modelo.getNombreAlumno(modelo.calificaciones.length-1)
+                + "\nEl promedio del examen es:" + modelo.notaMaxima());
+
+        JOptionPane.showMessageDialog(null, textArea);
+    
+    }
+    
+    
+
+    
+
     public int Menu() {
 
         int menu = Integer.parseInt(JOptionPane.showInputDialog("---------Bienvenido al Sistema De Notas JGR---------\nDigite a continuacion el numero de la opción a la cual desea acceder"
                 + "\n1.Digitar el total de estudiantes que desea agregar al Sistema\n2.Digitar Notas\n3.Imprimir Notas de Alumnos,Nombre de padre o Encargado y Nombre de alumno"
-                + "\n4.Imprimir Notas Ordenadas\n5.Imprimir estudiante con nota mas alta"
-                + "\n6.Imprimir Estudiante connota mas Baja\n7.Imprimir Promedio de la clase\n8.Salir."));
+                + "\n4.Imprimir Notas Ordenadas\n5.Imprimir Estudiante con la nota mas Alta"
+                + "\n6.Imprimir Estudiante con nota mas Baja\n7.Imprimir Promedio de la clase\n8.Salir."));
 
         return menu;
     }

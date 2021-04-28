@@ -44,10 +44,10 @@ public class ModeloSistemaNotas {
     }
 
     public double notaMinima() {
-        double notaBaja = calificaciones[70];
-
+        double notaBaja = calificaciones[0];
+        
         for (double nota : calificaciones) {
-            notaBaja = nota;
+            
             if (nota < notaBaja) {
                 notaBaja = nota;
             }
@@ -89,9 +89,10 @@ public class ModeloSistemaNotas {
         double notaAlta = calificaciones[0];
 
         for (double nota : calificaciones) {
-            notaAlta = nota;
-            if (nota >= notaAlta) {
+         
+            if (nota > notaAlta) {
                 notaAlta = nota;
+                
             }
         }
         return notaAlta;

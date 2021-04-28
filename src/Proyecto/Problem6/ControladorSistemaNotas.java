@@ -6,14 +6,15 @@ package Proyecto.Problem6;
  */
 public class ControladorSistemaNotas {
 
-    VistaSistemaNotas vista;
+    
     ModeloSistemaNotas mm;
-
+    VistaSistemaNotas vista=new VistaSistemaNotas(mm);
     public void Iniciar() {
-        vista = new VistaSistemaNotas(mm);
+        
+        
         while (true) {
         int numMenu = vista.Menu();
-
+        
        
             switch (numMenu) {
 
@@ -25,20 +26,27 @@ public class ControladorSistemaNotas {
                     break;
                     
                 case 3:
-                    vista.ImprimirNotas();
+                    vista.generarReporteTodosAlumnos();
                     break;
                 
                 case 4:
-                    vista.ImprimirOrdenNotas();
+                    vista.generarReporteTodosExamenesOrdenados();
                     break;
                 case 5:
-                   // vista.ImprimirNotaAlta();
+                    vista.imprimirNotaMasAlta();
+                    break;
+                case 6:
+                    vista.ImprimirNotaBaja();
                     break;
                 case 7:
                     vista.ImprimirPromedio();
                     break;
                 
+                
+                    
+                
             }
+            if(numMenu==8){break;}
         }
     }
 }
