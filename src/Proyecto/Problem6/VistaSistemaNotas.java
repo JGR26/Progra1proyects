@@ -15,10 +15,17 @@ public class VistaSistemaNotas {
     Date date = new Date();
     Scanner sca = new Scanner(System.in);
 
+    /**
+     *El costructuor recibe como parametro un modelo
+     * @param modelo
+     */
     public VistaSistemaNotas(ModeloSistemaNotas modelo) {
         this.modelo = modelo;
     }
 
+    /**
+     *Le muestra al usuario las opciones para digitar las notas
+     */
     public void digitarNotas() {
 
         String nombre = JOptionPane.showInputDialog("Digite el nombre del alumno: ");
@@ -30,6 +37,9 @@ public class VistaSistemaNotas {
 
     }
 
+    /**
+     *Pide los datos necesarios del examen mediante un scanner
+     */
     public void digitarNotasScanner() {
         String ss = sca.nextLine();
         System.out.print("Digite el nombre del alumno: ");
@@ -43,6 +53,9 @@ public class VistaSistemaNotas {
         modelo.agregarNota(nota, pts, nombre, padres);
     }
 
+    /**
+     *Pide los datos del profesor y el curso
+     */
     public void datosProfesor() {
         String nombre = JOptionPane.showInputDialog("Digite su nombre completo: ");
         String curso = JOptionPane.showInputDialog("Digite el nombre del curso: ");
@@ -52,6 +65,9 @@ public class VistaSistemaNotas {
 
     }
 
+    /**
+     *Pide los datos del profesor y el curso mediante un scaner
+     */
     public void datosProfesorScanner() {
         String ss = sca.nextLine();
         System.out.print("Digite su nombre completo: ");
@@ -64,17 +80,26 @@ public class VistaSistemaNotas {
         modelo.agregarDatosProfesor(nombre, curso, codigoCurso);
     }
 
+    /**
+     *Pide al usuario el numero total de alumnos el cual se subira al sistema
+     */
     public void totalDeAlumnos() {
         int cantidadEst = Integer.parseInt(JOptionPane.showInputDialog("Digite el total de estudiantes al que desea agregar notas"));
         modelo = new ModeloSistemaNotas(cantidadEst);
     }
 
+    /**
+     *Pide al usuario el numero total de alumnos el cual se subira al sistema mediante un scanner
+     */
     public void totalDeAlumnosScanner() {
         System.out.println("Digite el total de estudiantes al que desea agregar notas:");
         int cantidadEst = sca.nextInt();
         modelo = new ModeloSistemaNotas(cantidadEst);
     }
 
+    /**
+     *Imprime en pantalla el reporte de todos los alumnos y los examenes
+     */
     public void generarReporteTodosAlumnos() {
         JTextArea textArea = new JTextArea();
 
@@ -97,6 +122,9 @@ public class VistaSistemaNotas {
 
     }
 
+    /**
+     *Imprime en pantalla el reporte de todos los alumnos y los examenes mediante un scanner 
+     */
     public void generarReporteTodosAlumnosScanner() {
         String datosCurso = ("Codigo del curso: " + modelo.getCodigoCurso()
                 + "\nNombre del curso: " + modelo.getNombreCurso()
@@ -112,6 +140,9 @@ public class VistaSistemaNotas {
         System.out.println("Fecha de reporte: " + date + "\n");
     }
 
+    /**
+     *genera un reporte de los estudiantes en orden de menor a mayor mediante un scanner
+     */
     public void generarReporteTodosExamenesOrdenadosScanner() {
         modelo.bubbleSortCalifi();
         String datosCurso = ("Codigo del curso: " + modelo.getCodigoCurso()
@@ -128,6 +159,9 @@ public class VistaSistemaNotas {
         System.out.println("Fecha de reporte: " + date + "\n");
     }
 
+    /**
+     *genera un reporte de todos los alumnos de menor a mayor 
+     */
     public void generarReporteTodosExamenesOrdenados() {
 
         JTextArea textArea = new JTextArea();
@@ -150,6 +184,9 @@ public class VistaSistemaNotas {
         JOptionPane.showMessageDialog(null, textArea);
     }
 
+    /**
+     *Imprime el promedio ponderado del grupo
+     */
     public void imprimirPromedio() {
         JTextArea textArea = new JTextArea();
         textArea.append("Codigo del curso: " + modelo.getCodigoCurso()
@@ -160,6 +197,9 @@ public class VistaSistemaNotas {
 
     }
 
+    /**
+     *Imprime el promedio del grupo mediante un scanner
+     */
     public void imprimirPromedioScanner() {
         System.out.println("Codigo del curso: " + modelo.getCodigoCurso()
                 + "\nNombre del curso: " + modelo.getNombreCurso()
@@ -168,6 +208,9 @@ public class VistaSistemaNotas {
                 + "\nEl promedio ponderado del grupo es de: " + modelo.promedio() + "\nFecha de reporte: " + date);
     }
 
+    /**
+     *Imprime la nota mas baja de la clase
+     */
     public void imprimirNotaBaja() {
         JTextArea textArea = new JTextArea();
         modelo.bubbleSortCalifi();
@@ -185,6 +228,9 @@ public class VistaSistemaNotas {
         JOptionPane.showMessageDialog(null, textArea);
     }
 
+    /**
+     *Imprime la nota mas baja del curso mediante un scanner
+     */
     public void imprimirNotaBajaScanner() {
         modelo.bubbleSortCalifi();
         int n = 0;
@@ -199,6 +245,9 @@ public class VistaSistemaNotas {
                 + "\nEl promedio del examen es:" + modelo.notaMinima() + "\nFecha de reporte: " + date);
     }
 
+    /**
+     *Imprime la nota mas alta del curso
+     */
     public void imprimirNotaMasAlta() {
         JTextArea textArea = new JTextArea();
         textArea.append("Codigo del curso: " + modelo.getCodigoCurso()
@@ -212,6 +261,9 @@ public class VistaSistemaNotas {
 
     }
 
+    /**
+     *Imprime la nota mas alta del curso mediante un scanner
+     */
     public void imprimirNotaMasAltaScanner() {
         System.out.println("Codigo del curso: " + modelo.getCodigoCurso()
                 + "\nNombre del curso: " + modelo.getNombreCurso()
@@ -222,7 +274,11 @@ public class VistaSistemaNotas {
                 + "\nFecha de reporte: " + date);
 
     }
-
+    
+    /**
+     *Imprime un menu el cual se utilizara para indicar la opción solicitada
+     * @return
+     */
     public int menu() {
 
         int menu = Integer.parseInt(JOptionPane.showInputDialog("---------Bienvenido al Sistema De Calificaciones JGR---------\nDigite a continuacion el numero de la opción a la cual desea acceder"
@@ -234,6 +290,10 @@ public class VistaSistemaNotas {
         return menu;
     }
 
+    /**
+     **Imprime un menu el cual se utilizara para indicar la opción solicitada mediante un scanner
+     * @return
+     */
     public int menuScanner() {
 
         System.out.println("---------Bienvenido al Sistema De Calificaciones JGR---------\nDigite a continuacion el numero de la opción a la cual desea acceder"
@@ -245,6 +305,9 @@ public class VistaSistemaNotas {
         return menu;
     }
 
+    /**
+     *Se imprime en pantalla el manual al usuario
+     */
     public void manualUsuario() {
         String manual = "---------GRACIAS POR UTILIZAR NUESTRO SISTEMA DE CALIFICACIONES---------\n"
                 + "A continuación hemos preparado una guía para ayudarlo mejor a entender el sistema:\n"
@@ -263,6 +326,9 @@ public class VistaSistemaNotas {
         JOptionPane.showMessageDialog(null, manual);
     }
 
+    /**
+     *Se imprime en pantalla un manual al usuario mediante un scanner
+     */
     public void manualUsuarioScanner() {
         String manual = "---------GRACIAS POR UTILIZAR NUESTRO SISTEMA DE CALIFICACIONES---------\n"
                 + "A continuación hemos preparado una guía para ayudarlo mejor a entender el sistema:\n"
@@ -279,6 +345,9 @@ public class VistaSistemaNotas {
         System.out.println(manual);
     }
     
+    /**
+     *Se imprime en pantalla especificaciones del programa
+     */
     public void acercaDe(){
         
         String acercaDe= "Autor del programa: Jairo Guzmán\n"

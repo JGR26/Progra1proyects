@@ -7,9 +7,9 @@ package Proyecto.Problem6;
  */
 public class Tester {
     public static void main(String[] args) {
-      ControladorSistemaNotas controlador=new ControladorSistemaNotas(); 
+      ControladorSistemaNotas c=new ControladorSistemaNotas(); 
       
-      controlador.Iniciar();
+      c.Iniciar();
     }
    
     
