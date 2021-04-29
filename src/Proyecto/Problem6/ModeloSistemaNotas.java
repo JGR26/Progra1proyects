@@ -11,7 +11,9 @@ public class ModeloSistemaNotas {
     public String[] nombresAlumnos;
     public String[] nombreDePadres;
     public String[] puntosObtenidos;
- 
+    public String nombreProfesor;
+    public String nombreCurso;
+    public String codigoCurso;
 
     public ModeloSistemaNotas(int cantidadDeEstudiantes) {
         calificaciones = new double[cantidadDeEstudiantes];
@@ -43,11 +45,17 @@ public class ModeloSistemaNotas {
         }
     }
 
+    public void agregarDatosProfesor(String nombre, String nomCurso, String codigo) {
+        this.nombreProfesor = nombre;
+        this.nombreCurso = nomCurso;
+        this.codigoCurso = codigo;
+    }
+
     public double notaMinima() {
         double notaBaja = calificaciones[0];
-        
+
         for (double nota : calificaciones) {
-            
+
             if (nota < notaBaja) {
                 notaBaja = nota;
             }
@@ -57,9 +65,7 @@ public class ModeloSistemaNotas {
     }
 
     void bubbleSortCalifi() {
-        
-        
-      
+
         int n = calificaciones.length;
         for (int i = 0; i < n - 1; i++) {
             for (int j = 0; j < n - i - 1; j++) {
@@ -68,31 +74,29 @@ public class ModeloSistemaNotas {
                     double temp = calificaciones[i];
                     calificaciones[i] = calificaciones[i + 1];
                     calificaciones[i + 1] = temp;
-                    String nomAlumnos=nombresAlumnos[i];
-                    nombresAlumnos[i]=nombresAlumnos[i+1];
-                    nombresAlumnos[i+1]=nomAlumnos;
-                    String nombrepadre=nombreDePadres[i];
-                    nombreDePadres[i]=nombreDePadres[i+1];
-                    nombreDePadres[i+1]=nombrepadre;
-                    String ptsObte=puntosObtenidos[i];
-                    puntosObtenidos[i]=puntosObtenidos[i+1];
-                    puntosObtenidos[i+1]=ptsObte;
+                    String nomAlumnos = nombresAlumnos[i];
+                    nombresAlumnos[i] = nombresAlumnos[i + 1];
+                    nombresAlumnos[i + 1] = nomAlumnos;
+                    String nombrepadre = nombreDePadres[i];
+                    nombreDePadres[i] = nombreDePadres[i + 1];
+                    nombreDePadres[i + 1] = nombrepadre;
+                    String ptsObte = puntosObtenidos[i];
+                    puntosObtenidos[i] = puntosObtenidos[i + 1];
+                    puntosObtenidos[i + 1] = ptsObte;
                 }
             }
         }
 
     }
-    
-    
 
     public double notaMaxima() {
         double notaAlta = calificaciones[0];
 
         for (double nota : calificaciones) {
-         
+
             if (nota > notaAlta) {
                 notaAlta = nota;
-                
+
             }
         }
         return notaAlta;
@@ -131,6 +135,18 @@ public class ModeloSistemaNotas {
     public int getIndice() {
 
         return indice;
+    }
+
+    public String getNombreProfesor() {
+        return nombreProfesor;
+    }
+
+    public String getNombreCurso() {
+        return nombreCurso;
+    }
+
+    public String getCodigoCurso() {
+        return codigoCurso;
     }
 
 }
