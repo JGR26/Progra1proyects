@@ -1,4 +1,4 @@
-package Proyecto;
+package Proyecto.problem1y2;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package Proyecto;
+package Proyecto.problem3;
 
 import java.security.SecureRandom;
 import java.awt.Color;

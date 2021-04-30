@@ -1,4 +1,4 @@
-package Proyecto;
+package Proyecto.Problem4;
 
 import java.util.Arrays;// se importa la libreria arrays
 import java.util.Scanner;
@@ -19,7 +19,7 @@ public class Busquedabinaria {
      */
     public void busquedabinaria() {
         Scanner sca = new Scanner(System.in);
-       // Arrays.sort(listanum);// esto es solo para practicar otras formas de arreglo aunq no era necesario queria practicarlo jajaja
+        Arrays.sort(listanum);// esto es solo para practicar otras formas de arreglo aunq no era necesario queria practicarlo jajaja
         System.out.println("Digite un numero para verificar si esta en el arreglo:");
         this.numSolicitado = sca.nextInt();// se le pide un numero al usuario para buscarlo en  el sistema
 

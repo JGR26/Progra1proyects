@@ -1,6 +1,7 @@
 
-package Proyecto;
+package Proyecto.Problem4;
 
+import Proyecto.Problem4.Busquedabinaria;
 import java.util.Scanner;
 
 /**

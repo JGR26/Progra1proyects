@@ -1,6 +1,7 @@
 
-package Proyecto;
+package Proyecto.problem3;
 
+import Proyecto.problem3.Problem3;
 import javax.swing.JFrame;
 
 /**

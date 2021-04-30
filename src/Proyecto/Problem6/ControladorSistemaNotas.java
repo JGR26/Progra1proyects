@@ -6,7 +6,7 @@ package Proyecto.Problem6;
  */
 public class ControladorSistemaNotas {
 
-    boolean modoGrafico = true;
+    private boolean modoGrafico = true;
     ModeloSistemaNotas mm;
     VistaSistemaNotas vista = new VistaSistemaNotas(mm);
 
