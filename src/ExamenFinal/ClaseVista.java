@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
  */
 public class ClaseVista {
 
-    EquipoSonido ep;
+    public EquipoSonido ep;
 
     public ClaseVista(EquipoSonido ep) {
         this.ep = ep;

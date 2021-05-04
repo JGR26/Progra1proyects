@@ -35,7 +35,7 @@ public class EquipoSonidoControlador {
                                 cr.reproducirCancionesAleatorio();
                                 break;
                             case 4:
-
+                                ep.eliminarAudio();
                                 break;
 
                         }
