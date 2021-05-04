@@ -9,7 +9,8 @@ public class EquipoSonido {
     public ListaReproducción[] reproduccion;
     public int cont;
     public int max;
-
+    public Reloj rj;
+    public Parlantes pr;
     public EquipoSonido(ListaReproducción[] reproduccion) {
         this.reproduccion = reproduccion;
     }

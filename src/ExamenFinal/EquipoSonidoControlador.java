@@ -11,7 +11,7 @@ public class EquipoSonidoControlador {
     EquipoSonido ep = new EquipoSonido();
     ClaseVista vista = new ClaseVista(ep);
     ClaseReproducciondeListas cr = new ClaseReproducciondeListas(ep, vista, pr);
-
+    Reloj rj;
     public void iniciar() {
 
         int z = vista.menuInic();
