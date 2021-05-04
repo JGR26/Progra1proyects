@@ -6,7 +6,7 @@ package ExamenFinal;
  */
 public class ListaReproducción {
 
-    String canciones;
+    public String canciones;
 
     public ListaReproducción() {
 

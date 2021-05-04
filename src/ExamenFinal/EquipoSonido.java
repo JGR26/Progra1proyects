@@ -6,9 +6,9 @@ package ExamenFinal;
  */
 public class EquipoSonido {
 
-    ListaReproducción[] reproduccion;
-    int cont;
-    int max;
+    public ListaReproducción[] reproduccion;
+    public int cont;
+    public int max;
 
     public EquipoSonido(ListaReproducción[] reproduccion) {
         this.reproduccion = reproduccion;
@@ -39,7 +39,7 @@ public class EquipoSonido {
         return resultado;
     }
 
-    public boolean eliminarEx() {
+    public boolean eliminarAudio() {
         boolean resultado = false;
         if (cont != 0) {
             cont--;

@@ -6,10 +6,10 @@ package ExamenFinal;
  * @author JGR
  */
 public class Parlantes {
-    String parlanteDerecho;
-    String ParlanteIzquierdo;
-    String parlanteSubwoof;
-    String volumen;
+    public String parlanteDerecho;
+    public String parlanteIzquierdo;
+    public String parlanteSubwoof;
+    public String volumen;
     public String getParlanteDerecho() {
         return parlanteDerecho;
     }
@@ -19,11 +19,11 @@ public class Parlantes {
     }
 
     public String getParlanteIzquierdo() {
-        return ParlanteIzquierdo;
+        return parlanteIzquierdo;
     }
 
-    public void setParlanteIzquierdo(String ParlanteIzquierdo) {
-        this.ParlanteIzquierdo = ParlanteIzquierdo;
+    public void setParlanteIzquierdo(String parlanteIzquierdo) {
+        this.parlanteIzquierdo = parlanteIzquierdo;
     }
 
     public String getParlanteSubwoof() {
@@ -37,15 +37,15 @@ public class Parlantes {
     public Parlantes() {
     }
 
-    public Parlantes(String parlanteDerecho, String ParlanteIzquierdo, String parlanteSubwoof) {
+    public Parlantes(String parlanteDerecho, String parlanteIzquierdo, String parlanteSubwoof) {
         this.parlanteDerecho = parlanteDerecho;
-        this.ParlanteIzquierdo = ParlanteIzquierdo;
+        this.parlanteIzquierdo = parlanteIzquierdo;
         this.parlanteSubwoof = parlanteSubwoof;
     }
 
     @Override
     public String toString() {
-        return "\nConfiguración de Parlantes: \n" + "Esta Activado Parlante derecho?" + parlanteDerecho + "\nEsta Activado Parlante Izquierdo?" + ParlanteIzquierdo + "\nEsta Activado Parlante Subwoof?" + parlanteSubwoof + "\nNivel de volumen: " + volumen + "\n----------------------\n";
+        return "\nConfiguración de Parlantes: \n" + "Esta Activado Parlante derecho?" + parlanteDerecho + "\nEsta Activado Parlante Izquierdo?" + parlanteIzquierdo + "\nEsta Activado Parlante Subwoof?" + parlanteSubwoof + "\nNivel de volumen: " + volumen + "\n----------------------\n";
     }
 
     
