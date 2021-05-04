@@ -15,7 +15,7 @@ public class ClaseVista {
     }
 
     public int menuInic() {
-        int menu = Integer.parseInt(JOptionPane.showInputDialog("1.Para escuchar lista de reproduccion\n2.Para escuchar la Radio"));
+        int menu = Integer.parseInt(JOptionPane.showInputDialog("1.Para escuchar lista de reproduccion\n2.Para escuchar la Radio\n3.Alarma"));
         return menu;
     }
 
@@ -62,5 +62,17 @@ public class ClaseVista {
         pr.setParlanteSubwoof(parS);
         pr.setVolumen(volumen);
     }
-
+    public void relojvista(Reloj rj){
+        
+        int hora=Integer.parseInt(JOptionPane.showInputDialog("Digite la Hora que desea iniciar el equipo de sonido"));
+        int min=Integer.parseInt(JOptionPane.showInputDialog("Digite los minutos "));
+        rj.setHora(hora);
+        rj.setMin(min);
+    }
+    public boolean solicreloj(){
+        boolean reloj=Boolean.parseBoolean(JOptionPane.showInputDialog("Desea agregarle una alarma al reloj?"));
+        
+        return reloj;
+    }
+    
 }

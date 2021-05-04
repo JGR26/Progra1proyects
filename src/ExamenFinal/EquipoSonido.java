@@ -49,4 +49,10 @@ public class EquipoSonido {
         return resultado;
 
     }
+    
+    public void alarma(ClaseVista vista,Reloj rj){
+        if(vista.solicreloj()==true){
+            vista.relojvista(rj);
+        }
+    }
 }

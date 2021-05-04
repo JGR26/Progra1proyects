@@ -13,7 +13,7 @@ public class EquipoSonidoControlador {
     ClaseReproducciondeListas cr = new ClaseReproducciondeListas(ep, vista, pr);
 
     public void iniciar() {
-        
+
         int z = vista.menuInic();
         while (true) {
             switch (z) {
@@ -57,10 +57,17 @@ public class EquipoSonidoControlador {
                                 cr.radio();
                                 break;
                         }
+                        if (vista.menuInic() == 3) {
+                            break;
+                        }
                     }
-
+                    break;
+                case 3:
+                    Reloj rj=new Reloj();
+                    ep.alarma(vista, rj);
+                    break;
             }
-            if (vista.menuInic() == 3) {
+            if (vista.menuInic() == 4) {
                 break;
             }
         }
