@@ -38,9 +38,10 @@ public class ClaseReproducciondeListas {
 
     public void reproducirCancionesAleatorio() {
         String listareproduccion = "";
-        for (int i = 0; i < es.cont; i++) {
-
-            listareproduccion += es.getReproduccion()[i + 2].toString() + "\n";
+        for (double i = 0; i < es.cont; i++) {
+            double s=(Math.random()*i+1);
+            int e=(int) s;
+            listareproduccion += es.getReproduccion()[e].toString() + "\n";
             listareproduccion += "Parlantes y Volumen Activado en este momento" + parlante.toString() + "\n";
             listareproduccion += "En este momento empezarán a sonar sus rolitas esperemos que disfrute" + "\n";
         }
