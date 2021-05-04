@@ -8,10 +8,10 @@ import javax.swing.JOptionPane;
  * @author JGR
  */
 public class ClaseVista {
-    ListaReproducción lt;
+    EquipoSonido ep;
 
-    public ClaseVista(ListaReproducción lt) {
-        this.lt = lt;
+    public ClaseVista(EquipoSonido ep) {
+        this.ep=ep;
     }
     
     
@@ -27,7 +27,7 @@ public class ClaseVista {
     public void agregarCanciones(ListaReproducción reproducción){
         String cancion=JOptionPane.showInputDialog("Digite el codigo del audio para agregarlo a su lista de  reproducción: ");
         
-         lt.setCanciones(cancion);
+         reproducción.setCanciones(cancion);
         
     }
     public void habilitacionParlantes(Parlantes pr){
