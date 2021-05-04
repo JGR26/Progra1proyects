@@ -45,7 +45,7 @@ public class Parlantes {
 
     @Override
     public String toString() {
-        return "Parlantes{" + "parlanteDerecho=" + parlanteDerecho + ", ParlanteIzquierdo=" + ParlanteIzquierdo + ", parlanteSubwoof=" + parlanteSubwoof + ", volumen=" + volumen + '}';
+        return "\nConfiguración de Parlantes: \n" + "Esta Activado Parlante derecho?" + parlanteDerecho + "\nEsta Activado Parlante Izquierdo?" + ParlanteIzquierdo + "\nEsta Activado Parlante Subwoof?" + parlanteSubwoof + "\nNivel de volumen: " + volumen + "\n----------------------\n";
     }
 
     

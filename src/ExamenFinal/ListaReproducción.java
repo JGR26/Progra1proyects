@@ -1,4 +1,3 @@
-
 package ExamenFinal;
 
 /**
@@ -6,11 +5,13 @@ package ExamenFinal;
  * @author JGr
  */
 public class ListaReproducción {
-    
+
     String canciones;
-    public ListaReproducción(){
-        
+
+    public ListaReproducción() {
+
     }
+
     public ListaReproducción(String canciones) {
         this.canciones = canciones;
     }
@@ -25,9 +26,7 @@ public class ListaReproducción {
 
     @Override
     public String toString() {
-        return "Lista de Canciones: " + canciones ;
+        return "\nLista de Canciones: " + canciones + "\n-----------------\n";
     }
-    
-    
-    
+
 }

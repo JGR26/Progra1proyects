@@ -1,4 +1,3 @@
-
 package ExamenFinal;
 
 /**
@@ -6,6 +5,7 @@ package ExamenFinal;
  * @author JGR
  */
 public class Radio {
+
     String audio;
     Parlantes par;
     ClaseVista vista;
@@ -27,10 +27,7 @@ public class Radio {
 
     @Override
     public String toString() {
-        return "Radio:\n"+ "Audio de la radio:" + audio ;
+        return "Radio:\n" + "Audio de la radio:" + audio;
     }
-    
-    
-    
-    
+
 }
