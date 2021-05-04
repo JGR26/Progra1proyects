@@ -47,6 +47,17 @@ public class ClaseVista {
         
         
     }
-    
+    public void habilitacionParlantes(Radio rd,Parlantes pr){
+        String codAudio=JOptionPane.showInputDialog("Digite el codigo Binario del audio: ");
+        rd.setAudio(codAudio);
+        String parI=JOptionPane.showInputDialog("Desea habilitar el parlante Izquierdo?");
+        String parR=JOptionPane.showInputDialog("Desea habilitar el parlante derecho?");
+        String parS=JOptionPane.showInputDialog("Desea habilitar el parlante subwoof?");
+        String volumen=JOptionPane.showInputDialog("Del 0 al 10 que volumen desea?");
+        pr.setParlanteDerecho(parR);
+        pr.setParlanteIzquierdo(parI);
+        pr.setParlanteSubwoof(parS);
+        pr.setVolumen(volumen);
+    }
     
 }

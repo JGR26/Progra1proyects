@@ -9,11 +9,20 @@ public class ClaseReproducciondeListas {
     EquipoSonido es;
     ClaseVista vista;
     Parlantes parlante;
+    Radio rd;
     public ClaseReproducciondeListas(EquipoSonido es, ClaseVista vista,Parlantes parlantes) {
         this.es = es;
         this.vista = vista;
         this.parlante=parlantes;
     }
+
+    public ClaseReproducciondeListas(EquipoSonido es, ClaseVista vista, Parlantes parlante, Radio rd) {
+        this.es = es;
+        this.vista = vista;
+        this.parlante = parlante;
+        this.rd = rd;
+    }
+    
     
     public void reproducirCanciones(){
          String listareproduccion = "";
@@ -49,5 +58,17 @@ public class ClaseReproducciondeListas {
          vista.reproduccion(imprimirLista);
          
      }
+     
+     public void radio(){
+         String reproduccionRadio = "";
+        
+
+            reproduccionRadio += rd.toString();
+            reproduccionRadio += "Parlantes y Volumen Activado en este momento"+ parlante.toString();
+            reproduccionRadio += "En este momento empezara a sonar sus rolitas esperemos que disfrute";
+        
+        vista.reproduccion(reproduccionRadio);
+        
+    }
     
 }
